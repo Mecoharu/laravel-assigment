@@ -2,8 +2,7 @@
 
 <body>
     <h2>Currenly Available Projects</h2>
-
-
+<p>{{ $greeting}}</p>
     <ul>
         @foreach($projects as $projects)
         <li>
@@ -12,5 +11,5 @@
         </li>
         @endforeach
     </ul>
-
-</x-layout>
+</body>
+</html> 
