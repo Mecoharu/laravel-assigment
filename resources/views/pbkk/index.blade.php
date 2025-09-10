@@ -1,23 +1,16 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pbkk Project | Home</title>
-</head>
+<x-layout>
+
 <body>
     <h2>Currenly Available Projects</h2>
-<p>{{ $greeting}}</p>
+
+
     <ul>
-        <li> 
-            <a href="/projects/{{ $projects[0]['id'] }} - {{ $projects[0]['description'] }}">
-                {{ $projects[0]['name'] }} - {{ $projects[0]['description'] }}
-            </a>
+        @foreach($projects as $projects)
+        <li>
+            <p>{{$projects['id']}}</p>
+            <a href="/pbkk/{{$projects['id']}}">View Details</a>
         </li>
-        <li> 
-            <a href="/projects/{{ $projects[1]['id'] }} - {{ $projects[1]['description'] }}">
-                {{ $projects[1]['name'] }} - {{ $projects[1]['description'] }}
-            </a>
-        </li>
+        @endforeach
     </ul>
-</body>
-</html> 
+
+</x-layout>

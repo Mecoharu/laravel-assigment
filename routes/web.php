@@ -16,7 +16,10 @@ Route::get('/pbkk', function () {
     return view('pbkk.index', ['greeting' => 'Hello!', 'projects' => $projects]);
 });
 
+Route::get('/pbkk/create', function () {
+    return view('pbkk.create');
+});
+
 Route::get('/pbkk/{id}', function ($id) {
-  
     return view('pbkk.show', ['id' => $id]);
 });
